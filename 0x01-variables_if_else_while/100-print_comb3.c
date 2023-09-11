@@ -1,24 +1,29 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
- * main - A program that prints all numbers 00-99
+ * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: always 0 (success)
  */
+
 int main(void)
 {
-	int num;
+	int n, p;
 
-	for (num = 0; num <= 99; num++)
+	for (n = '0'; n < '9'; n++)
 	{
-		putchar((num / 10) + '0');
-		putchar((num % 10) + '0');
-		if (num != 99)
-		{
-		putchar(',');
-		putchar(' ');
-		}
-		}
+	for (p = n + 1; p <= '9'; p++)
+	{
+	if (p != n)
+	{
+	putchar(n);
+	putchar(p);
+	if (n == '8' && p == '9')
+	continue;
+	putchar(',');
+	putchar(' ');
+	}
+	}
+	}
 	putchar('\n');
 	return (0);
 }}
