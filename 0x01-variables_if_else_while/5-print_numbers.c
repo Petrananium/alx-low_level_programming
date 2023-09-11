@@ -1,19 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
- * main - Entry poin
- * Description - prints number base 10	
- * Return: always 0 (success)
+ * main - Prints numbers.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n = 0;
+	char cun;
 
-	if (n = 0; n <= 9; a++);
-	{ 
-		putchar(a + '0');
-	} 
+	for (cun = 0; cun <= 9; cun++)
+	{
+		printf("%d", cun);
+	}
 	putchar('\n');
 	return (0);
-
-} 
-
+}
