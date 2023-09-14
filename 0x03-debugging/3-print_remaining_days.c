@@ -1,25 +1,3 @@
- - Debugging
-0x03. C - Debugging
-
-Question 3
-
-
-First add these prototype to your main.h file
-
-
-
-void print_remaining_days(int month, int day, int year);
-
-int convert_day(int month, int day);
-
-
-
-Then create this file and paste your code
-
-
-3-print_remaining_days.c
-
-
 #include <stdio.h>
 
 #include "main.h"
