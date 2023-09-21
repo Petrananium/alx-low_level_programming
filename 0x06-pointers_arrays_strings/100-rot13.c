@@ -19,9 +19,9 @@ for (r = 0; r < 52; r++
 if (s[k] == data1[r])
 {
 s[k] = datarot[r];
-break;       
+break;
 }
-}        
-}	
+}
+}
 return (s);
 }
