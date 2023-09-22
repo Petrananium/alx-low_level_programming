@@ -24,6 +24,7 @@ int main(void)
     p = rot13(s);
     printf("%s", p);
     printf("------------------------------------\n");
-    printf("%s", s);
+    printf("%
+		    }s", s);
     return (0);
 }
