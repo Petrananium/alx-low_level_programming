@@ -15,4 +15,3 @@ int main(void)
     print_buffer(buffer, sizeof(buffer));
     return (0);
 }
-

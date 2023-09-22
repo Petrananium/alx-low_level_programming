@@ -1,28 +1,55 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_number - main function
+ * print_buffer - main function
  *
- * @n: Function parameter
+ * @b: The buffer.
  *
- * Return: Always 0.
+ * @size: size of buffer
+ *
+ * Return: 0
  */
 
-void print_number(int n)
+void print_buffer(char *b, int size)
 {
-	unsigned int n1;
+	int x;
+	int y;
+	int z;
 
-	n1 = n;
+	x = 0;
 
-	if (n < 0)
+	if (size <= 0)
 	{
-	_putchar('-');
-	n1 = -n;
+	printf("\n");
+	return;
 	}
-
-	if (n1 / 10 != 0)
+	while (x < size)
 	{
-	print_number(n1 / 10);
+	y = size - x < 10 ? size - x : 10;
+	printf("%08x: ", x);
+	for (z = 0; z < 10; z++)
+	{
+	if (z < y)
+	printf("%02x", *(b + x + z));
+	else
+	printf("  ");
+	if (z % 2)
+	{
+	printf(" ");
 	}
-	_putchar((n1 % 10) + '0');
+	}
+	for (z = 0; z < y; z++)
+	{
+	int c = *(b + x + z);
+
+	if (c < 32 || c > 132)
+	{
+	c = '.';
+	}
+	printf("%c", c);
+	}
+	printf("\n");
+	x += 10;
+	}
 }
